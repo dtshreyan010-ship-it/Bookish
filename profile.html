@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>User Profile</h1>
+
+<div id="profileData"></div>
+
+<script>
+
+let user = JSON.parse(localStorage.getItem("user"));
+
+document.getElementById("profileData").innerHTML = `
+    <h2>${user.name}</h2>
+    <p>${user.email}</p>
+`;
+
+</script>
+
+</body>
+</html>
