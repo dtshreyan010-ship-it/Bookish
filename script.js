@@ -83,7 +83,7 @@ function talk(){
 
     let response = "";
 
-    if(input.includes("hello")){
+    if(input.includes("hi")){
         response = "Hello reader!";
     }
 
@@ -96,7 +96,24 @@ function talk(){
         response =
         "You can request books from users.";
     }
+    else if(message.includes("exchange")){
+    response = "Go to the Books page to exchange books.";
+    }
 
+    else if(message.includes("lend")){
+    response = "You can lend books by creating a listing.";
+    }
+
+    else if(message.includes("contact")){
+    response = "Use the request feature to contact the owner.";
+    }
+    else if(
+    message.toLowerCase().includes("contact") ||
+    message.toLowerCase().includes("chat") ||
+    message.toLowerCase().includes("message user")
+    ){
+    response = "To contact another user, open the book listing and use the Request/Chat feature to send them a message.";
+    }
     else{
         response =
         "Sorry, I don't understand.";
